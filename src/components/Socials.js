@@ -16,7 +16,7 @@ const Socials = () => {
             <ImFacebook style={{color: '#B18845'}} />
           </a>
         </li>
-        <li>
+        {/* <li>
           <a href="http://twitter.com" target="_blank" rel="noreferrer">
             <ImTwitter  style={{color: '#B18845'}} />
           </a>
@@ -25,14 +25,14 @@ const Socials = () => {
           <a href="http://pinterest.com" target="_blank" rel="noreferrer">
             <ImPinterest style={{color: '#B18845'}} />
           </a>
-        </li>
+        </li> */}
         <li>
-          <a href="http://instagram.com" target="_blank" rel="noreferrer">
+          <a href="https://www.instagram.com/themyth.visuals/" target="_blank" rel="noreferrer">
             <ImInstagram style={{color: '#B18845'}} />
           </a>
         </li>
         <li>
-          <a href="http://youtube.com" target="_blank" rel="noreferrer">
+          <a href="https://www.youtube.com/@themythvisuals" target="_blank" rel="noreferrer">
             <ImYoutube style={{color: '#B18845'}} />
           </a>
         </li>

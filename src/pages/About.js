@@ -42,7 +42,7 @@ const About = () => {
           >
             <h1 className="h1">About me</h1>
             <p className="mb-12 max-w-xl">
-              My name is <b>Thuận thơm</b>
+              My name is <b>Ethan Thuan Le</b>
               <br />
               <br />
               A person whose life is about capturing moments that last

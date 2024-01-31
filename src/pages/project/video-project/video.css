@@ -1,0 +1,39 @@
+/* Định dạng cho các kích thước màn hình nhỏ hơn */
+@media screen and (max-width: 768px) {
+    .content-container {
+      padding-top: 5rem; /* Điều chỉnh khoảng cách từ top */
+    }
+    
+    .video-info {
+      text-align: center; /* Căn giữa nội dung */
+    }
+    
+    .video-container {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .video-item {
+      margin-bottom: 20px; /* Khoảng cách giữa các video */
+    }
+  }
+  
+  /* Định dạng cho các kích thước màn hình lớn hơn */
+  @media screen and (min-width: 1024px) {
+    .content-container {
+      padding-top: 10rem; /* Điều chỉnh khoảng cách từ top */
+    }
+    
+    .video-info {
+      text-align: left; /* Căn trái nội dung */
+    }
+    
+    .video-container {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .video-item {
+      width: 48%; /* Điều chỉnh chiều rộng của từng video */
+    }
+  }

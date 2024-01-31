@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 // import images
-import WomanImg from "../img/contact/woman.png";
+import WomanImg from "../img/contact/Tommy2.jpg";
 // import motion
 import { motion } from "framer-motion";
 //import transition
@@ -35,7 +35,7 @@ const Contact = () => {
             className="lg:flex-1 lg:pt-32 px-4"
           >
             <h1 className="h1">Contact me</h1>
-            <p className="mb-12">I would love to get suggestions from you.</p>
+            <p className="mb-12">Message for us or any question/request you have</p>
             {/* image */}
             <form className="flex flex-col gap-y-4">
               <div className="flex gap-x-10">
@@ -51,6 +51,21 @@ const Contact = () => {
                 />
               </div>
               <input
+                className="outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]"
+                type="text"
+                placeholder="Phone"
+              />
+               <input
+                className="outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]"
+                type="text"
+                placeholder="Event date"
+              />
+              <input
+                className="outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]"
+                type="text"
+                placeholder="Venue/Location"
+              />
+               <input
                 className="outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]"
                 type="text"
                 placeholder="Your message"

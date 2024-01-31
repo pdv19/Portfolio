@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 // import images
 import WomanImg from "../img/home/woman.png";
-import Tommy from "../img/home/Tommy.jpg"
+import Tommy from "../img/home/Tommy2.jpg"
 // import link
 import { Link } from "react-router-dom";
 // import motion
@@ -19,7 +19,7 @@ const Home = () => {
       exit={{ opacity: 0 }}
       transition={transition1}
       className="section"
-      style={{backgroundColor: '#F1F2F2'}}
+      style={{backgroundColor: '#fff'}}
     >
       <div className="container mx-auto h-full relative">
         {/*text and img wrapper */}
@@ -33,13 +33,13 @@ const Home = () => {
             className="w-full pt-36 pb-14 lg:pt-0 lg:pb-0 lg:w-auto z-10 lg:absolute flex flex-col justify-center items-center lg:items-start"
           >
             <h1 className="h1" style={{color: '#B18845'}}>
-              photographer <br /> & film maker
+              Photographer <br /> & Filmmaker
             </h1>
             <p className="text-[26px] lg:text-[36px] font-primary mb-4 lg:mb-12" style={{color: '#B18845'}}>
-              Atalanta GA, USA
+              Atlanta GA, USA
             </p>
             <Link to={"/contact"} className="btn mb-[30px]">
-              Hire me
+              Contact me
             </Link>
           </motion.div>
           {/*image */}

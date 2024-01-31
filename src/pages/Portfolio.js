@@ -37,13 +37,13 @@ const Portfolio = () => {
           >
             <h1 className="h1">Portfolio</h1>
             <p className="mb-12 max-w-sm">
-              My name is <b>Thuận thơm</b>
+              My name is <b>Ethan Thuan Le</b>
               <br />
               <br />
               Suck my dick
             </p>
             <Link to={"/contact"} className="btn mb-[30px] mx-auto lg:mx-0">
-              Hire me
+              Contact me
             </Link>
           </motion.div>
           {/* images grid */}
@@ -52,7 +52,6 @@ const Portfolio = () => {
             onMouseLeave={mouseLeaveHandler}
             className="grid grid-cols-2 lg:gap-2"
           >
-            {/* image */}
             <div className="max-w-[250px] lg:max-w=[320px] h-[187px] lg:h-[220px] bg-accent overflow-hidden">
               <img
                 className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"
