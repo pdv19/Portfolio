@@ -13,6 +13,7 @@
     "react-dom": "^18.2.0",
     "react-photo-album": "^2.3.0",
     "react-player": "^2.13.0",
+    "react-responsive-carousel": "^3.2.23",
     "react-scripts": "5.0.1",
     "styled-components": "^6.1.1",
     "web-vitals": "^2.1.4"

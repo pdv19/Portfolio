@@ -39,8 +39,6 @@ const Portfolio = () => {
             <p className="mb-12 max-w-sm">
               My name is <b>Ethan Thuan Le</b>
               <br />
-              <br />
-              Suck my dick
             </p>
             <Link to={"/contact"} className="btn mb-[30px] mx-auto lg:mx-0">
               Contact me
