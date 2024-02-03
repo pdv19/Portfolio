@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6ff182aa.css",
+    "main.js": "/static/js/main.7e8471d0.js",
+    "static/media/Intro.mp4": "/static/media/Intro.b5ef4c538763790ef62f.mp4",
+    "static/media/video3.webm": "/static/media/video3.4a736c603ed63cb64fe7.webm",
+    "static/media/video4.webm": "/static/media/video4.a28d787b4687bdf2f0d0.webm",
+    "static/media/video2.webm": "/static/media/video2.4e824f9f25dc6a99cad4.webm",
+    "static/media/woman.png": "/static/media/woman.0b567228cc502c6c819d.png",
+    "static/media/Tommy.jpg": "/static/media/Tommy.0dfa0cc48fa3eb2bfa0f.jpg",
+    "static/media/Tommy2.jpg": "/static/media/Tommy2.42b744aaf89582017168.jpg",
+    "static/media/2.png": "/static/media/2.f024aaddcc41bf605df4.png",
+    "static/media/3.png": "/static/media/3.74a97c517288f9391680.png",
+    "static/media/4.png": "/static/media/4.5980ed01668b7fcbbeb3.png",
+    "static/media/1.png": "/static/media/1.dbd17879efd7832e29f0.png",
+    "static/media/Logo.png": "/static/media/Logo.5946b8b3e1ed156b0563.png",
+    "static/media/logo.svg": "/static/media/logo.826cb5f922b3277a89a21308bace338f.svg",
+    "index.html": "/index.html",
+    "main.6ff182aa.css.map": "/static/css/main.6ff182aa.css.map",
+    "main.7e8471d0.js.map": "/static/js/main.7e8471d0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6ff182aa.css",
+    "static/js/main.7e8471d0.js"
+  ]
+}
