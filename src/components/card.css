@@ -73,7 +73,7 @@
   
   .card:hover .img-content {
     scale: 2.5;
-    rotate: 30deg;
+    /* rotate: 30deg; */
     filter: blur(7px);
   }
   
