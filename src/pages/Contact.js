@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 // import images
 import WomanImg from "../img/contact/Tommy2.jpg";
 // import motion
@@ -6,9 +6,31 @@ import { motion } from "framer-motion";
 //import transition
 import { transition1 } from "../transitions";
 import { CursorContext } from "../context/CursorContext";
+import emailjs from '@emailjs/browser';
+
 
 const Contact = () => {
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
+  const form = useRef();
+  const { REACT_APP_EMAILJS_SERVICE_ID, REACT_APP_EMAILJS_TEMPLATE_ID, REACT_APP_EMAILJS_PUBLIC_KEY } = process.env
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(REACT_APP_EMAILJS_SERVICE_ID, REACT_APP_EMAILJS_TEMPLATE_ID, form.current, {
+        publicKey: REACT_APP_EMAILJS_PUBLIC_KEY,
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
   return (
     <motion.section
       initial={{ opacity: 0, y: "100%" }}
@@ -16,7 +38,7 @@ const Contact = () => {
       exit={{ opacity: 0, y: "100%" }}
       transition={transition1}
       className="section"
-      style={{backgroundColor: '#F1F2F2'}}
+      style={{ backgroundColor: '#F1F2F2' }}
     >
       <div className="container mx-auto h-full">
         <div className="flex flex-col lg:flex-row h-full items-center justify-start pt-36 gap-x-8 text-center lg:text-left ">
@@ -37,38 +59,47 @@ const Contact = () => {
             <h1 className="h1">Contact me</h1>
             <p className="mb-12">Message for us or any question/request you have</p>
             {/* image */}
-            <form className="flex flex-col gap-y-4">
+            <form className="flex flex-col gap-y-4" ref={form} onSubmit={sendEmail}>
               <div className="flex gap-x-10">
                 <input
                   className="outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]"
                   type="text"
                   placeholder="Your name"
+                  name="user_name"
                 />
                 <input
                   className="outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]"
                   type="text"
                   placeholder="Your email address"
+                  name="user_email"
                 />
               </div>
               <input
                 className="outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]"
                 type="text"
                 placeholder="Phone"
+                name="user_phone"
+
               />
-               <input
+              <input
                 className="outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]"
                 type="text"
                 placeholder="Event date"
+                name="user_eventDate"
               />
               <input
                 className="outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]"
                 type="text"
                 placeholder="Venue/Location"
+                name="user_address"
+
               />
-               <input
+              <input
                 className="outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]"
                 type="text"
                 placeholder="Your message"
+                name="user_message"
+
               />
               <button className="btn mb-[30px] mx-auto lg:mx-0 self-start">
                 Send it
