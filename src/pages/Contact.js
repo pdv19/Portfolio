@@ -77,7 +77,7 @@ const Contact = () => {
               <input
                 className="outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]"
                 type="text"
-                placeholder="Phone"
+                placeholder="Your Phone"
                 name="user_phone"
 
               />
@@ -90,7 +90,7 @@ const Contact = () => {
               <input
                 className="outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]"
                 type="text"
-                placeholder="Venue/Location"
+                placeholder="What would you like us to capture?"
                 name="user_address"
 
               />
