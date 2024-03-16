@@ -1,55 +1,57 @@
-import React from 'react'
-import PhotoAlbum from "react-photo-album";
-import Tommy from '../../../img/home/Tommy.jpg'
-const breakpoints = [1080, 640, 384, 256, 128, 96, 64, 48];
+import React from "react";
+import { Project2SourceImg } from "../../../components/LazyImage/data";
 
-const unsplashLink = (id, width, height) =>
-  `https://source.unsplash.com/${id}/${width}x${height}`;
+import PhotoSection from "../../../components/Project1/PhotoSection";
+import ContainerWrapper from "../../../components/Project1/ContainerWrapper";
+import ContactMeBtn from "../../../components/ContactMeBtn";
 
-const unsplashPhotos = [
-  { id: "8gVv6nxq6gY", width: 1080, height: 800 },
-  { id: "Dhmn6ete6g8", width: 1080, height: 1620 },
-  { id: "RkBTPqPEGDo", width: 1080, height: 720 },
-  { id: "Yizrl9N_eDA", width: 1080, height: 721 },
-  { id: "KG3TyFi0iTU", width: 1080, height: 1620 },
-  { id: "Jztmx9yqjBw", width: 1080, height: 607 },
-  { id: "-heLWtuAN3c", width: 1080, height: 608 },
-  { id: "xOigCUcFdA8", width: 1080, height: 720 },
-  { id: "1azAjl8FTnU", width: 1080, height: 1549 },
-  { id: "ALrCdq-ui_Q", width: 1080, height: 720 },
-  { id: "twukN12EN7c", width: 1080, height: 694 },
-  { id: "9UjEyzA6pP4", width: 1080, height: 1620 },
-  { id: "sEXGgun3ZiE", width: 1080, height: 720 },
-  { id: "S-cdwrx-YuQ", width: 1080, height: 1440 },
-  { id: "q-motCAvPBM", width: 1080, height: 1620 },
-  { id: "Xn4L310ztMU", width: 1080, height: 810 },
-  { id: "iMchCC-3_fE", width: 1080, height: 610 },
-  { id: "X48pUOPKf7A", width: 1080, height: 160 },
-  { id: "GbLS6YVXj0U", width: 1080, height: 810 },
-  { id: "9CRd1J1rEOM", width: 1080, height: 720 },
-  { id: "xKhtkhc9HbQ", width: 1080, height: 1440 },
+
+const PhotoCardListProject2 = [
+  {
+    src: Project2SourceImg.SHOT_2,
+    textHeader: "🚀 PROJECT 1 💨",
+    textContent:
+      "Incorporate the power of Intersection Observer into your web projects to optimize image loading ande for users. e  bandwidth, and create a more efficient and enjoyable user experience. Learn how to implement this performance-enhancing feature in your projects and unlock the full potential of optimized image loading.",
+    button: <ContactMeBtn linkTo={'/contact'} />,
+  },
+  {
+    src: Project2SourceImg.SHOT_1,
+    textContent:
+      "Incorporate the power of Intersection Observer into your web projects to Incorporate the power of Intersection Observer into your web projects to",
+  },
+  {
+    src: Project2SourceImg.SHOT_7,
+    textContent:
+      "optimize image loading and elevate performance. With Intersection Incorporate the power of Intersection Observer into your web projects to",
+  },
+  {
+    src: Project2SourceImg.SHOT_3,
+    textContent:
+      "Observer, images are fetched dynamically as they come into the viewport, Incorporate the power of Intersection Observer into your web projects to",
+  },
+  {
+    src: Project2SourceImg.SHOT_4,
+    textContent:
+      "eliminating the need to load all images upfront. This technique improves Incorporate the power of Intersection Observer into your web projects to",
+  },
+  {
+    src: Project2SourceImg.SHOT_5,
+    textContent:
+      "page load speed and reduces unnecessary network requests, resulting in a Incorporate the power of Intersection Observer into your web projects to",
+  },
+  {
+    src: Project2SourceImg.SHOT_6,
+    textContent:
+      "smoother browsing experience for users. Incorporate the power of Intersection Observer into your web projects to",
+  },
 ];
-
-const photos = unsplashPhotos.map((photo) => ({
-  src: unsplashLink(photo.id, photo.width, photo.height),
-  width: photo.width,
-  height: photo.height,
-  srcSet: breakpoints.map((breakpoint) => {
-    const height = Math.round((photo.height / photo.width) * breakpoint);
-    return {
-      src: unsplashLink(photo.id, breakpoint, height),
-      width: breakpoint,
-      height,
-    };
-  }),
-}));
 
 const Project2 = () => {
   return (
-    <div style={{padding: '10rem 10px'}}>
-      <PhotoAlbum layout="rows" photos={photos} />;
-      </div>
-  )
-}
+    <ContainerWrapper>
+      <PhotoSection photoList={PhotoCardListProject2} />
+    </ContainerWrapper>
+  );
+};
 
-export default Project2
+export default Project2;

@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext, useRef, useState } from "react";
 // import images
 import WomanImg from "../img/contact/Tommy2.jpg";
 // import motion
@@ -23,10 +23,10 @@ const Contact = () => {
       })
       .then(
         () => {
-          console.log('SUCCESS!');
+          alert('Send mail successfully !');
         },
-        (error) => {
-          console.log('FAILED...', error.text);
+        () => {
+          alert('Send mail fail :(( Please try again');
         },
       );
   };
@@ -66,12 +66,14 @@ const Contact = () => {
                   type="text"
                   placeholder="Your name"
                   name="user_name"
+                  required
                 />
                 <input
                   className="outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]"
-                  type="text"
+                  type="email"
                   placeholder="Your email address"
                   name="user_email"
+                  required
                 />
               </div>
               <input
@@ -79,7 +81,7 @@ const Contact = () => {
                 type="text"
                 placeholder="Your Phone"
                 name="user_phone"
-
+                required
               />
               <input
                 className="outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]"

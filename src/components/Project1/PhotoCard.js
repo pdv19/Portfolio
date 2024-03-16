@@ -36,34 +36,30 @@ const PhotoCard = ({ id, itemProps }) => {
 
   const CardWrapper = ({ children, isMobile }) => (
     <div
-      className={`h-[100%] m-auto flex gap-[50px] ${
-        isMobile ? "flex-col" : "flex-row"
-      }`}
+      className={`h-[100%] m-auto flex gap-[50px] ${isMobile ? "flex-col" : "flex-row"
+        }`}
     >
       {children}
     </div>
   );
 
   const ImageWrapper = ({ children }) => (
-    <div className="h-[100%] w[100%] bg-white p-[10px] rounded-lg">
+    <div className={` bg-white p-[10px] rounded-lg ${(isMobile || isTablet) ? 'h-[100%] w[100%]' : 'h-[130%] w[130%]'}`}>
       {children}
     </div>
   );
 
-  const ImagePart = ({ src, secondSrc }) => {
+  const ImagePart = ({ id, src, secondSrc }) => {
     //Add carousel for 2 photo section
-    console.log("isTablet", { isTablet, isMobile });
     if ((isMobile || isTablet) && secondSrc) {
       return (
         <div
-          className={`flex gap-4 basis-2/3 h-[100%] justify-center items-center inline-block align-middle object-cover ${
-            isMobile ? "w-[100%]" : "w-[70%]"
-          }`}
+          className={`flex gap-4 basis-2/3 h-[100%] justify-center items-center inline-block align-middle object-cover ${isMobile ? "w-[100%]" : "w-[70%]"
+            }`}
         >
           <div
-            className={`flex justify-center gap-4 ${
-              isMobile ? "h-[100%]" : "h-[70%]"
-            } `}
+            className={`flex justify-center gap-4 ${isMobile ? "h-[100%]" : "h-[70%]"
+              } `}
           >
             <Carousel showThumbs={false} showStatus={false}>
               <ImageWrapper>
@@ -81,17 +77,16 @@ const PhotoCard = ({ id, itemProps }) => {
     if (!secondSrc) {
       return (
         <div
-          className={`flex gap-4  h-[100%] justify-center items-center inline-block align-middle object-cover ${
-            isMobile ? "w-[100%]" : "w-[70%]"
-          }`}
+          className={`flex h-[100%] justify-center items-center inline-block align-middle object-cover  ${isMobile ? "w-[100%]" : "w-[70%]"
+            }`}
+          style={!(isMobile || isTablet) ? id % 2 ? { marginRight: '5%' } : { marginLeft: '5%' } : null}
         >
           <div
-            className={`flex justify-center gap-4 ${
-              isMobile ? "h-[100%]" : "h-[70%]"
-            } `}
+            className={`flex justify-center gap-4 ${isMobile ? "h-[100%]" : "h-[70%]"
+              } `}
           >
             <ImageWrapper>
-              <img className="h-[100%] w[100%]" src={src} />
+              <img className="h-[100%] [100%]" src={src} />
             </ImageWrapper>
           </div>
         </div>
@@ -100,14 +95,12 @@ const PhotoCard = ({ id, itemProps }) => {
 
     return (
       <div
-        className={`flex gap-4 h-[100%] justify-center items-center inline-block align-middle object-cover ${
-          isMobile ? "w-[100%]" : "w-[70%]"
-        }`}
+        className={`flex gap-4 h-[100%] justify-center items-center inline-block align-middle object-cover ${isMobile ? "w-[100%]" : "w-[70%]"
+          }`}
       >
         <div
-          className={`flex justify-center gap-4 ${
-            isMobile ? "h-[100%]" : "h-[70%]"
-          } `}
+          className={`flex justify-center gap-4 ${isMobile ? "h-[100%]" : "h-[70%]"
+            } `}
         >
           <ImageWrapper>
             <img className="h-[100%] w[100%]" src={src} />
@@ -128,9 +121,8 @@ const PhotoCard = ({ id, itemProps }) => {
   }) => {
     return (
       <motion.div
-        className={`flex flex-col justify-center align-middle gap-2 ${
-          isMobile ? "w-[100%]" : "w-[40%]"
-        }`}
+        className={`flex flex-col justify-center align-middle gap-2 ${isMobile ? "w-[100%]" : "w-[40%]"
+          }`}
         style={y_TextTransform}
       >
         <div className="font-bold text-[32px]">{textHeader ?? textHeader}</div>
@@ -144,7 +136,7 @@ const PhotoCard = ({ id, itemProps }) => {
     return (
       <CardContainer id={id} ref={cardRef} scrollYProgress={scrollYProgress}>
         <CardWrapper isMobile={isMobile}>
-          <ImagePart src={src} secondSrc={secondSrc} />
+          <ImagePart id={id} src={src} secondSrc={secondSrc} />
           <DesciptionPart
             textContent={textContent}
             textHeader={textHeader}
