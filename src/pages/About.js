@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 // import images
 import WomanImg from "../img/about/woman.png";
-import Tommy from "../img/home/Tommy.jpg"
+import Tommy from "../img/home/Tommy.jpg";
 //import link
 import { Link } from "react-router-dom";
 // import motion
@@ -19,7 +19,7 @@ const About = () => {
       exit={{ opacity: 0, y: "100%" }}
       transition={transition1}
       className="section"
-      style={{backgroundColor: '#F1F2F2'}}
+      style={{ backgroundColor: "#F1F2F2" }}
     >
       <div
         onMouseEnter={mouseEnterHandler}
@@ -29,9 +29,10 @@ const About = () => {
         {/* text & img wrapper */}
         <div className="flex flex-col lg:flex-row h-full items-center justify-center gap-x-24 text-center lg:text-left lg:pt-16">
           {/* image */}
-          <div className="flex-1 max-h-96 lg:max-h-max order-2 lg:order-none overflow-hidden">
+          <div className="flex-1 max-h-96 lg:max-h-max order-2 lg:pt-10 lg:order-none overflow-hidden">
             <img src={Tommy} alt="" />
           </div>
+
           {/* text */}
           <motion.div
             initial={{ opacity: 0, y: "-80%" }}
