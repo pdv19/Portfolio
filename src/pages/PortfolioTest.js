@@ -18,7 +18,7 @@ const Portfolio = () => {
     const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
     return (
      <div>
-       <section
+       <motion.section
         initial={{ opacity: 0, y: "100%" }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: "100%" }}
@@ -28,7 +28,7 @@ const Portfolio = () => {
       >
         {/* <div className="container mx-auto h-full relative"> */}
           {/* <div className="flex flex-col lg:flex-row h-full items-center justify-center lg:justify-start gap-x-24 text-center lg:text-left pt-24 lg:pt-36 pb-8"> */}
-            <div style={{paddingTop: '10rem'}}
+            <motion.div style={{paddingTop: '10rem'}}
               onMouseEnter={mouseEnterHandler}
               onMouseLeave={mouseLeaveHandler}
               initial={{ opacity: 0, y: "-80%" }}
@@ -47,16 +47,16 @@ const Portfolio = () => {
               <Link to={"/contact"} className="btn mb-[30px] mx-auto mx-auto mt-auto">
                 Contact me
               </Link>
-            </div>
+            </motion.div>
           {/* </div> */}
         {/* </div> */}
-        <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-20">
+        <motion.div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-20">
           <Card title="Project 1" description="Project 1" link="/portfolio/project1" img={Project1SourceImg.SHOT_1} />
           <Card title="Project 2" description="Project 2" link="/portfolio/project2" img={Project1SourceImg.SHOT_3} />
           <Card title="Project 3" description="Project 3" link="/portfolio/project2" img={Project1SourceImg.SHOT_5} />
           <Card title="Project 4" description="Project 4" link="/portfolio/video" img={Project1SourceImg.SHOT_8} />
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
      </div>
     );
   };
