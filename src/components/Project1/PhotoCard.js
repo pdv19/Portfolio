@@ -49,7 +49,7 @@ const PhotoCard = ({ id, itemProps }) => {
     </div>
   );
 
-  const ImagePart = ({ id, src, secondSrc }) => {
+  const ImagePart = ({ id, src, secondSrc, alt }) => {
     //Add carousel for 2 photo section
     if ((isMobile || isTablet) && secondSrc) {
       return (
@@ -63,10 +63,10 @@ const PhotoCard = ({ id, itemProps }) => {
           >
             <Carousel showThumbs={false} showStatus={false}>
               <ImageWrapper>
-                <img className="h-[100%] w[100%]" src={src} />
+                <img className="h-[100%] w[100%]" src={src} alt={alt} />
               </ImageWrapper>
               <ImageWrapper>
-                <img className="h-[100%] w[100%]" src={secondSrc} />
+                <img className="h-[100%] w[100%]" src={secondSrc} alt={alt} />
               </ImageWrapper>
             </Carousel>
           </div>
