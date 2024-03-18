@@ -9,13 +9,14 @@ import Project2 from '../pages/project/project2/Project2';
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import VideoProject from "../pages/project/video-project/VideoProject";
+import HomePage from "../pages/HomePage";
 
 const AnimRoutes = () => {
   const location = useLocation()
   return (
     <AnimatePresence initial={true} mode="wait">
       <Routes key={location.pathname} location={location}>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/portfolio" element={<PortfolioTest />} />

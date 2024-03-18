@@ -1,13 +1,13 @@
 import React from "react";
 import ReactPlayer from "react-player";
 import introVideo from "./video/Intro.mp4";
-import introVideo2 from "./video/video2.webm";
-import introVideo3 from "./video/video3.webm";
-import introVideo4 from "./video/video4.webm";
+import introVideo2 from "./video/videoBg.mp4";
+import introVideo3 from "./video/videoBg.mp4";
+import introVideo4 from "./video/videoBg.mp4";
 import "./video.css";
 import ContactMeBtn from "../../../components/ContactMeBtn";
+
 const VideoProject = () => {
-  console.log("a");
   return (
     <div>
       <section
@@ -44,7 +44,7 @@ const VideoProject = () => {
               <strong className="font-bold text-sm">
                 Cinematography by Ethan Thuan Le
               </strong>
-              <ContactMeBtn linkTo={'/contact'} />
+              <ContactMeBtn linkTo={"/contact"} />
             </div>
 
             <div className="px-2 py-2">
