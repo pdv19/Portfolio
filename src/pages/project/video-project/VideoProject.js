@@ -33,7 +33,7 @@ const VideoProject = () => {
           <div className="grid lg:grid-cols-2 gap-4">
             <div className="flex flex-col items-start justify-center">
               <p className="font-normal text-base">
-                PRESENTED BY <strong>The Myth Visual studio</strong>
+                PRESENTED BY <strong>The Myth Visuals</strong>
               </p>
               <strong className="font-bold text-2xl text-[#B18845]">
                 Averi + Josh Gallery
