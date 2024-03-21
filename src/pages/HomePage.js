@@ -8,12 +8,12 @@ const HomePage = () => {
     <div className="main">
       <div className="overlay"></div>
       <video src={videoBg} autoPlay loop muted />
-      <motion.div 
-      className="content"
-      initial={{ opacity: 0, y: "-80%" }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: "-80%" }}
-      transition={transition1}
+      <motion.div
+        className="content"
+        initial={{ opacity: 0, y: "-80%" }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: "-80%" }}
+        transition={transition1}
       >
         <h1 className="h1" style={{ color: "#B18845" }}>
           The Myth Visuals
