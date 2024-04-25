@@ -13,6 +13,7 @@ import { transition1 } from "../transitions";
 import { CursorContext } from "../context/CursorContext";
 import Card from "../components/Card";
 import { Project1SourceImg } from '../components/LazyImage/data'
+import ContactMeBtn from "../components/ContactMeBtn";
 
 const Portfolio = () => {
     const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
@@ -39,23 +40,24 @@ const Portfolio = () => {
             >
               <h1 className="h1 mx-auto mt-auto">Portfolio</h1>
               <p className="mb-12 max-w-sm  mx-auto mt-auto">
-                My name is <b>Ethan Thuan Le</b>
+                <b>Ethan Thuan Le</b>
                 <br />
-                <br />
+                {/* <br /> */}
                 Project
               </p>
-              <Link to={"/contact"} className="btn mb-[30px] mx-auto mx-auto mt-auto">
+              {/* <Link to={"/contact"} className="btn mb-[30px] mx-auto mx-auto mt-auto">
                 Contact me
-              </Link>
+              </Link> */}
             </motion.div>
           {/* </div> */}
         {/* </div> */}
-        <motion.div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-20">
+        <motion.div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-20">
           <Card title="Project 1" description="Project 1" link="/portfolio/project1" img={Project1SourceImg.SHOT_1} />
           <Card title="Project 2" description="Project 2" link="/portfolio/project2" img={Project1SourceImg.SHOT_3} />
           <Card title="Project 3" description="Project 3" link="/portfolio/project2" img={Project1SourceImg.SHOT_5} />
           <Card title="Project 4" description="Project 4" link="/portfolio/video" img={Project1SourceImg.SHOT_8} />
         </motion.div>
+        <ContactMeBtn extraClassName="mx-auto my-auto" />
       </motion.section>
      </div>
     );

@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 // import images
-import WomanImg from "../img/about/woman.png";
-import Tommy from "../img/home/Tommy.jpg";
+import Tommy from "../img/about/Tommy.jpg";
 //import link
 import { Link } from "react-router-dom";
 // import motion
@@ -45,13 +44,10 @@ const About = () => {
             <p className="mb-12 max-w-xl">
               My name is <b>Ethan Thuan Le</b>
               <br />
-              <br />
-              A person whose life is about capturing moments that last
-              <br />
-              Let's get your story told!
+              <br />A person whose life is about capturing moments that last
             </p>
             <Link to={"/portfolio"} className="btn">
-              View my work
+              Let's get your story told!
             </Link>
           </motion.div>
         </div>
