@@ -20,31 +20,32 @@ const PhotoCard = ({ id, itemProps }) => {
     const { children, id, scrollYProgress } = props;
 
     return (
-      <section
+      <div
         className="flex items-center justify-center snap-center w-[100%] flex-col"
-        style={{
-          height: "calc(100vh - 10rem - 50px)",
-          maxHeight: "calc(100vh - 10rem - 50px)",
-        }}
         key={id}
         ref={ref}
       >
         {children}
-      </section>
+      </div>
     );
   });
 
   const CardWrapper = ({ children, isMobile }) => (
     <div
-      className={`h-[100%] m-auto flex gap-[50px] ${isMobile ? "flex-col" : "flex-row"
-        }`}
+      className={`h-[100%] ${
+        secondSrc ? "w-[100%]" : "w-[100%]"
+      } m-auto flex justify-center gap-[50px] ${isMobile ? "flex-col" : "flex-row"}`}
     >
       {children}
     </div>
   );
 
   const ImageWrapper = ({ children }) => (
-    <div className={` bg-white p-[10px] rounded-lg ${(isMobile || isTablet) ? 'h-[100%] w[100%]' : 'h-[130%] w[130%]'}`}>
+    <div
+      className={` bg-white p-[10px] rounded-lg ${
+        isMobile || isTablet ? "h-[100%] w[100%]" : "h-[130%] w[130%]"
+      }`}
+    >
       {children}
     </div>
   );
@@ -54,16 +55,18 @@ const PhotoCard = ({ id, itemProps }) => {
     if ((isMobile || isTablet) && secondSrc) {
       return (
         <div
-          className={`flex gap-4 basis-2/3 h-[100%] justify-center items-center inline-block align-middle object-cover ${isMobile ? "w-[100%]" : "w-[70%]"
-            }`}
+          className={`flex gap-4 basis-2/3 h-[100%] justify-center items-center inline-block align-middle object-cover ${
+            isMobile ? "w-[100%]" : "w-[70%] "
+          }`}
         >
           <div
-            className={`flex justify-center gap-4 ${isMobile ? "h-[100%]" : "h-[70%]"
-              } `}
+            className={`flex justify-center gap-4 ${
+              isMobile ? "h-[100%]" : "h-[70%]"
+            } `}
           >
             <Carousel showThumbs={false} showStatus={false}>
               <ImageWrapper>
-                <img className="h-[100%] w[100%]" src={src} alt={alt} />
+                <img className="h-[100%] w[100%]" src={src} alt={alt} />*{" "}
               </ImageWrapper>
               <ImageWrapper>
                 <img className="h-[100%] w[100%]" src={secondSrc} alt={alt} />
@@ -77,16 +80,20 @@ const PhotoCard = ({ id, itemProps }) => {
     if (!secondSrc) {
       return (
         <div
-          className={`flex h-[100%] justify-center items-center inline-block align-middle object-cover  ${isMobile ? "w-[100%]" : "w-[70%]"
-            }`}
-          style={!(isMobile || isTablet) ? id % 2 ? { marginRight: '5%' } : { marginLeft: '5%' } : null}
+          className={`flex w-fit h-[100%] justify-center items-center inline-block align-middle object-cover`}
         >
           <div
-            className={`flex justify-center gap-4 ${isMobile ? "h-[100%]" : "h-[70%]"
-              } `}
+            className={`flex justify-center gap-4 ${
+              isMobile ? "h-[100%]" : "h-[70%]"
+            } `}
           >
             <ImageWrapper>
-              <img className="h-[100%] [100%]" src={src} />
+              <img
+                style={{ aspectRatio: "auto" }}
+                className="h-[100%] w-[100%]"
+                src={src}
+                alt={alt}
+              />
             </ImageWrapper>
           </div>
         </div>
@@ -95,18 +102,20 @@ const PhotoCard = ({ id, itemProps }) => {
 
     return (
       <div
-        className={`flex gap-4 h-[100%] justify-center items-center inline-block align-middle object-cover ${isMobile ? "w-[100%]" : "w-[70%]"
-          }`}
+        className={`flex gap-4 h-[100%] justify-center items-center inline-block align-middle object-cover ${
+          isMobile ? "w-[100%]" : "w-[70%]"
+        }`}
       >
         <div
-          className={`flex justify-center gap-4 ${isMobile ? "h-[100%]" : "h-[70%]"
-            } `}
+          className={`flex justify-center gap-4 ${
+            isMobile ? "h-[100%]" : "h-[70%]"
+          } `}
         >
           <ImageWrapper>
-            <img className="h-[100%] w[100%]" src={src} />
+            <img className="h-[100%] w[100%]" src={src} alt={alt} />
           </ImageWrapper>
           <ImageWrapper>
-            <img className="h-[100%] w[100%]" src={secondSrc} />
+            <img className="h-[100%] w[100%]" src={secondSrc} alt={alt} />
           </ImageWrapper>
         </div>
       </div>
@@ -121,12 +130,13 @@ const PhotoCard = ({ id, itemProps }) => {
   }) => {
     return (
       <motion.div
-        className={`flex flex-col justify-center align-middle gap-2 ${isMobile ? "w-[100%]" : "w-[40%]"
-          }`}
+        className={`flex flex-col justify-center  align-middle gap-2 ${
+          isMobile ? "w-[100%]" : "w-[40%]"
+        }`}
         style={y_TextTransform}
       >
         <div className="font-bold text-[32px]">{textHeader ?? textHeader}</div>
-        <div>{textContent ?? textContent}</div>
+        <div className="text-[20px] ">{textContent ?? textContent}</div>
         <div>{button ?? button}</div>
       </motion.div>
     );
