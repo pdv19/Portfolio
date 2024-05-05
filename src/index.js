@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-//import cursor context provider
 import CursorProvider from "./context/CursorContext";
 import MobileViewContext from "./context/MobileViewContext";
 

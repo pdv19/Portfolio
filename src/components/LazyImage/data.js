@@ -21,6 +21,13 @@ import Project_2_Shot_5 from "../../img/portfolio/project2/project_2_shot_5.jpg"
 import Project_2_Shot_6 from "../../img/portfolio/project2/project_2_shot_6.jpg";
 import Project_2_Shot_7 from "../../img/portfolio/project2/project_2_shot_7.jpg";
 
+import Project_3_Video_Shot_1 from "../../img/portfolio/project3/video_shot_1.mp4";
+import Project_3_Shot_1 from "../../img/portfolio/project3/IncelldermNS-3.jpg";
+import Project_3_Shot_2 from "../../img/portfolio/project3/DaiNamMenu-2.jpg";
+import Project_3_Shot_3 from "../../img/portfolio/project3/DaiNamMenu-93.jpg";
+import Project_3_Shot_4 from "../../img/portfolio/project3/Boxing-gym.jpg";
+import Project_3_Video_Shot_2 from "../../img/portfolio/project3/video_shot_2.mp4";
+
 export const data = [
   { src: Tommy },
   { src: A },
@@ -102,5 +109,18 @@ export const Project2SourceImg = {
   SHOT_6: Project_2_Shot_6,
 
   SHOT_7: Project_2_Shot_7,
+};
 
+export const Project3SourceImg = {
+  SHOT_1: Project_3_Video_Shot_1,
+
+  SHOT_2: Project_3_Shot_1,
+
+  SHOT_3: Project_3_Shot_2,
+
+  SHOT_4: Project_3_Shot_3,
+
+  SHOT_5: Project_3_Shot_4,
+
+  SHOT_6: Project_3_Video_Shot_2,
 };
