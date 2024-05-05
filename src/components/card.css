@@ -3,6 +3,7 @@
     height: 300px;
     position: relative;
     border-radius: 10px;
+    touch-action: manipulation;
   }
   
   .card-container::before {
@@ -84,16 +85,12 @@
   /* Định dạng cho các màn hình có chiều rộng nhỏ hơn 600px */
 @media screen and (max-width: 600px) {
   .card-container {
-    width: 100%; /* Thay đổi kích thước thành phần card-container cho thiết bị nhỏ hơn */
-    height: auto; /* Có thể sử dụng auto height hoặc giá trị khác tùy thuộc vào thiết kế của bạn */
-  }
-
-  .card .img-content {
-    transition: none; /* Gỡ bỏ transition để tránh hiệu ứng scale và rotate ở kích thước nhỏ hơn */
+    width: 90%;
+    height: auto;
   }
 
   .card .img-content svg {
-    display: none; /* Ẩn biểu tượng SVG khi kích thước màn hình nhỏ hơn */
+    display: none;
   }
 
   .card .content {
@@ -101,7 +98,7 @@
     transform: none; /* Gỡ bỏ transform */
     pointer-events: auto; /* Cho phép sự kiện click hoạt động */
     /* position: relative; */
-    padding: 10px; /* Thay đổi padding tùy thuộc vào thiết kế của bạn */
+    padding: 10px;
   }
 
   .card:hover .content,
@@ -110,3 +107,4 @@
     filter: none; /* Gỡ bỏ hover blur effect trên thiết bị nhỏ hơn */
   }
 }
+
