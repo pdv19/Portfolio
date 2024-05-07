@@ -78,7 +78,7 @@ const Portfolio = () => {
             img={Project1SourceImg.SHOT_8}
           />
         </motion.div>
-        <ContactMeBtn extraClassName="mx-auto my-auto" />
+        <ContactMeBtn extraClassName="mx-auto my-auto" linkTo={"/contact"} />
       </motion.section>
     </div>
   );
