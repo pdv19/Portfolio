@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 import { transition1 } from "../transitions";
 import { CursorContext } from "../context/CursorContext";
 import Card from "../components/Card";
-import { Project1SourceImg } from "../components/LazyImage/data";
+import { PortfolioSourceImg } from "../components/LazyImage/data";
 import ContactMeBtn from "../components/ContactMeBtn";
 
 const Portfolio = () => {
@@ -57,25 +57,25 @@ const Portfolio = () => {
             title="Portraiture"
             description=""
             link="/portfolio/portraiture"
-            img={Project1SourceImg.SHOT_1}
+            img={PortfolioSourceImg.SHOT_1}
           />
           <Card
             title="Editorial"
             description=""
             link="/portfolio/editorial"
-            img={Project1SourceImg.SHOT_3}
+            img={PortfolioSourceImg.SHOT_2}
           />
           <Card
             title="Commercial"
             description=""
             link="/portfolio/commercial"
-            img={Project1SourceImg.SHOT_5}
+            img={PortfolioSourceImg.SHOT_3}
           />
           <Card
             title="Project 4"
             description=""
             link="/portfolio/video"
-            img={Project1SourceImg.SHOT_8}
+            img={PortfolioSourceImg.SHOT_3}
           />
         </motion.div>
         <ContactMeBtn extraClassName="mx-auto my-auto" linkTo={"/contact"} />

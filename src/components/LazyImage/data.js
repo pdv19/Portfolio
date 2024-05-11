@@ -28,6 +28,10 @@ import Project_3_Shot_3 from "../../img/portfolio/project3/DaiNamMenu-93.jpg";
 import Project_3_Shot_4 from "../../img/portfolio/project3/Boxing-gym.jpg";
 import Project_3_Video_Shot_2 from "../../img/portfolio/project3/video_shot_2.mp4";
 
+import Portfolio_Shot_1 from "../../img/portfolio/portfolio_shot_1.jpg"
+import Portfolio_Shot_2 from "../../img/portfolio/portfolio_shot_2.jpeg"
+import Portfolio_Shot_3 from "../../img/portfolio/portfolio_shot_3.jpg"
+
 export const data = [
   { src: Tommy },
   { src: A },
@@ -76,6 +80,14 @@ export const data = [
   { src: "https://images.unsplash.com/photo-1683973122992-dcdf1569523d" },
   { src: "https://images.unsplash.com/photo-1683973122992-dcdf1569523d" },
 ];
+
+export const PortfolioSourceImg = {
+  SHOT_1: Portfolio_Shot_1,
+
+  SHOT_2: Portfolio_Shot_2,
+
+  SHOT_3: Portfolio_Shot_3,
+};
 
 export const Project1SourceImg = {
   SHOT_1: Project_1_Shot_1,
