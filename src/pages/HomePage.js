@@ -1,19 +1,25 @@
 import React from "react";
-import videoBg from "../pages/project/video-project/video/videoBg.mp4";
+import videoBgDesktop from "../pages/project/video-project/video/videoBg.mp4";
+import videoBgMobile from "../pages/project/video-project/video/MythMainPageVertical.mp4";
 import { motion } from "framer-motion";
 import { transition1 } from "../transitions";
 import moment from "moment";
 import { Link } from "react-router-dom";
 import ContactMeBtn from "../components/ContactMeBtn";
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
 const HomePage = () => {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up('sm'));
   const currentMonth = moment().format("MMMM");
   const text = `Book The Myth Visuals in ${currentMonth} for a 20% discount`;
   const upperText = text.toUpperCase();
+
   return (
     <div className="main">
       <div className="overlay"></div>
-      <video src={videoBg} autoPlay loop muted />
+      <video src={matches ? videoBgDesktop : videoBgMobile} autoPlay loop muted />
       <motion.div
         className="content"
         initial={{ opacity: 0, y: "-80%" }}
