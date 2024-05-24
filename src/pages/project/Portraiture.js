@@ -7,15 +7,8 @@ import ContactMeBtn from "../../components/ContactMeBtn";
 
 const PhotoCardListProject1 = [
   {
-    src: "https://images.unsplash.com/photo-1682685796186-1bb4a5655653",
+    src: Project1SourceImg.SHOT_9,
     textHeader: "Portraiture",
-    textContent:
-      "Incorporate the power of Intersection Observer into your web projects to optimize image loading ande for users. e  bandwidth, and create a more efficient and enjoyable user experience. Learn how to implement this performance-enhancing feature in your projects and unlock the full potential of optimized image loading.",
-    button: <ContactMeBtn linkTo={"/contact"} />,
-  },
-  {
-    src: Project1SourceImg.SHOT_3,
-    secondSrc: Project1SourceImg.SHOT_4,
     textContent: (
       <>
         <p style={{ fontStyle: "italic", marginBottom: "2px" }}>
@@ -34,8 +27,30 @@ const PhotoCardListProject1 = [
         </p>
       </>
     ),
+    button: <ContactMeBtn linkTo={"/contact"} />,
   },
-
+  // {
+  //   src: Project1SourceImg.SHOT_3,
+  //   secondSrc: Project1SourceImg.SHOT_4,
+  //   textContent: (
+  //     <>
+  //       <p style={{ fontStyle: "italic", marginBottom: "2px" }}>
+  //         "The camera is just a tool used to reflect what the photographer sees
+  //         in that moment."
+  //       </p>
+  //       <p>
+  //         I wasn't even the one behind the lens, but I set the scene and
+  //         lighting and asked Nhi's fiance, Phong, to capture his raw feelings
+  //         for her. He sees her as a beacon of pureness and guidance, a soul mate
+  //         who always has his back. His love for her translates to the amazing
+  //         photos he took. It was the first time Phong used a camera ever. But he
+  //         was the real photographer in this one. I'm the DOP - Director of
+  //         Photography and the one who witnessed their love story unfold, their
+  //         friend cheering them on from the sidelines.
+  //       </p>
+  //     </>
+  //   ),
+  // },
   {
     src: Project1SourceImg.SHOT_1,
     textContent: (

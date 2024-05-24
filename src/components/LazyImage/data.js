@@ -12,6 +12,7 @@ import Project_1_Shot_5 from "../../img/portfolio/project1/project_1_shot_5.jpg"
 import Project_1_Shot_6 from "../../img/portfolio/project1/project_1_shot_6.jpg";
 import Project_1_Shot_7 from "../../img/portfolio/project1/project_1_shot_7.jpg";
 import Project_1_Shot_8 from "../../img/portfolio/project1/project_1_shot_8.jpg";
+import Project_1_Shot_9 from "../../img/portfolio/project1/project_1_shot_9.jpg";
 
 import Project_2_Shot_1 from "../../img/portfolio/project2/project_2_shot_1.jpg";
 import Project_2_Shot_2 from "../../img/portfolio/project2/project_2_shot_2.jpg";
@@ -105,6 +106,8 @@ export const Project1SourceImg = {
   SHOT_7: Project_1_Shot_7,
 
   SHOT_8: Project_1_Shot_8,
+
+  SHOT_9: Project_1_Shot_9,
 };
 
 export const Project2SourceImg = {
