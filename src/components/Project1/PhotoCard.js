@@ -40,6 +40,11 @@ const PhotoCard = ({ id, itemProps }) => {
       className={` bg-white p-[10px] rounded-lg ${
         isMobile || isTablet ? "h-[100%] w[100%]" : "h-[130%] w[130%]"
       }`}
+      style={{
+        display: "table-cell",
+        verticalAlign: "middle",
+        textAlign: "center",
+      }}
     >
       {children}
     </div>
@@ -81,7 +86,7 @@ const PhotoCard = ({ id, itemProps }) => {
           >
             <Carousel showThumbs={false} showStatus={false}>
               <ImageWrapper>
-                <img className="h-[100%] w[100%]" src={src} alt={alt} />*{" "}
+                <img className="h-[100%] w[100%]" src={src} alt={alt} />
               </ImageWrapper>
               <ImageWrapper>
                 <img className="h-[100%] w[100%]" src={secondSrc} alt={alt} />
