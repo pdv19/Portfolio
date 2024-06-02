@@ -13,13 +13,14 @@ const HomePage = () => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up('sm'));
   const currentMonth = moment().format("MMMM");
-  const text = `Book The Myth Visuals in ${currentMonth} for a 20% discount`;
+  const currentYear = moment().year();
+  const text = `Book The Myth Visuals in ${currentMonth} ${currentYear} for a 20% discount`;
   const upperText = text.toUpperCase();
 
   return (
     <div className="main">
       <div className="overlay"></div>
-      <video src={matches ? videoBgDesktop : videoBgMobile} autoPlay loop muted />
+      <video src={matches ? videoBgDesktop : videoBgMobile} autoPlay loop muted playsInline />
       <motion.div
         className="content"
         initial={{ opacity: 0, y: "-80%" }}
