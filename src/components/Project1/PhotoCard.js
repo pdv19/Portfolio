@@ -41,9 +41,8 @@ const PhotoCard = ({ id, itemProps }) => {
         isMobile || isTablet ? "h-[100%] w[100%]" : "h-[130%] w[130%]"
       }`}
       style={{
-        display: "table-cell",
-        verticalAlign: "middle",
-        textAlign: "center",
+        height: "auto",
+        objectFit: "contain",
       }}
     >
       {children}
