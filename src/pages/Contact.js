@@ -58,7 +58,7 @@ const Contact = () => {
             className="lg:flex-1 lg:pt-32 px-10"
           >
             <h1 className="h1">Contact me</h1>
-            <p className="mb-12">Message for us or any question/request you have</p>
+            <p className="mb-12">Hey. Shoot me a message and I will personally get back to you within an hour</p>
             {/* image */}
             <form className="flex flex-col gap-y-4" ref={form} onSubmit={sendEmail}>
               <div className="flex gap-x-10">
