@@ -3,7 +3,6 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Portfolio from "../pages/Portfolio";
-import PortfolioTest from "../pages/PortfolioTest";
 import Portraiture from "../pages/project/Portraiture";
 import Editorial from "../pages/project/Editorial";
 import Commercial from "../pages/project/Commercial";
@@ -18,7 +17,7 @@ const AnimRoutes = () => {
       <Route path="/" element={<HomePage />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="/portfolio" element={<PortfolioTest />} />
+      <Route path="/portfolio" element={<Portfolio />} />
       <Route path="/portfolio/portraiture" element={<Portraiture />} />
       <Route path="/portfolio/editorial" element={<Editorial />} />
       <Route path="/portfolio/commercial" element={<Commercial />} />
