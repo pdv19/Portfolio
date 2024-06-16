@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ContactMeBtn = ({ extraClassName, linkTo, extraStyle }) => {
+const ContactMeBtn = ({ extraClassName, linkTo, extraStyle, btnName }) => {
   const combineClassName = `btn mb-[30px]` + " " + extraClassName;
 
   return (
@@ -10,7 +10,7 @@ const ContactMeBtn = ({ extraClassName, linkTo, extraStyle }) => {
       className={combineClassName}
       style={{ width: 300, marginTop: 10 }}
     >
-      Contact me
+      {btnName || "Contact me"}
     </Link>
   );
 };

@@ -8,10 +8,13 @@ import ContactMeBtn from "../../components/ContactMeBtn";
 
 const PhotoCardListProject2 = [
   {
-    src: Project2SourceImg.SHOT_2,
+    src: Project2SourceImg.SHOT_8,
     textHeader: "Editorial",
-    textContent:
-      "Incorporate the power of Intersection Observer into your web projects to optimize image loading ande for users. e  bandwidth, and create a more efficient and enjoyable user experience. Learn how to implement this performance-enhancing feature in your projects and unlock the full potential of optimized image loading.",
+    textContent:(
+      <>
+        <p>Editorial photography solely aims to convey an idea and capturing moments that words alone cannot convey . The tones, lighting, contrast, and emotions serve as narrative supporters.</p>
+      </>
+    ),
     button: <ContactMeBtn linkTo={"/contact"} />,
     type : 'video'
   },

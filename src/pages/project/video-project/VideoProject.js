@@ -1,13 +1,23 @@
 import React from "react";
 import ReactPlayer from "react-player";
 import introVideo from "./video/Intro.mp4";
-import introVideo2 from "./video/videoBg.mp4";
-import introVideo3 from "./video/videoBg.mp4";
-import introVideo4 from "./video/videoBg.mp4";
 import "./video.css";
 import ContactMeBtn from "../../../components/ContactMeBtn";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 
 const VideoProject = () => {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("sm"));
+
+  const textPCUpper =
+    "From Commercial - Wedding - Music Video - Documentary - Indie Projects";
+  const textPCUnder =
+    "There's a special touch that I can add to make your visuals look stunning";
+
+  const textMobileUpper =
+    "Commercial - Wedding - Music Video - Documentary - Indie Projects";
+
   return (
     <div>
       <section
@@ -31,20 +41,26 @@ const VideoProject = () => {
 
         <div className="px-2 py-2 2xl:px-80 xl:px-80 lg:px-20 md:px-20 sm:px-10">
           <div className="grid lg:grid-cols-2 gap-4">
-            <div className="flex flex-col items-start justify-center">
+            <div
+              className={`flex flex-col ${
+                matches ? "items-start" : "justify-center"
+              }`}
+            >
               <p className="font-normal text-base">
                 PRESENTED BY <strong>The Myth Visuals</strong>
               </p>
-              <strong className="font-bold text-2xl text-[#B18845]">
-                Averi + Josh Gallery
-              </strong>
               <p className="font-bold text-xs md:text-xs lg:text-base xl:text-base">
-                July 8th, 2023 | Saint Mary's Cathedral + Big Buck | Gaylord, MI
+                {matches ? textPCUpper : textMobileUpper}
               </p>
-              <strong className="font-bold text-sm">
-                Cinematography by Ethan Thuan Le
+              <strong className="font-bold text-xs md:text-xs lg:text-base xl:text-base">
+                {matches ? textPCUnder : ""}
               </strong>
-              <ContactMeBtn linkTo={"/contact"} />
+                <div className={`flex ${!matches && "justify-center"}`}>
+                  <ContactMeBtn
+                    linkTo={"/contact"}
+                    btnName="Book a call with me"
+                  />
+                </div>
             </div>
 
             <div className="px-2 py-2">
@@ -55,11 +71,10 @@ const VideoProject = () => {
                   width="100%"
                   height="100%"
                   controls
+                  playing
+                  playsInline
                 />
               </div>
-              <p className="text-center font-medium text-2xl p-2.5">
-                Highlight Film
-              </p>
             </div>
           </div>
 
@@ -68,14 +83,14 @@ const VideoProject = () => {
               <div className="wrapper">
                 <ReactPlayer
                   className="player"
-                  url={introVideo2}
+                  url="https://www.youtube.com/watch?v=4wz95dQEB7k"
                   width="100%"
                   height="100%"
                   controls
                 />
               </div>
               <p className="text-center font-medium text-2xl p-2.5">
-                Visit with Grandpa
+                Kendra & Jeremy intimate wedding at downtown Atlanta
               </p>
             </div>
 
@@ -83,13 +98,15 @@ const VideoProject = () => {
               <div className="wrapper">
                 <ReactPlayer
                   className="player"
-                  url={introVideo3}
+                  url="https://www.youtube.com/watch?v=GFwfwquxd7o"
                   width="100%"
                   height="100%"
                   controls
                 />
               </div>
-              <p className="text-center font-medium text-2xl p-2.5">Toasts</p>
+              <p className="text-center font-medium text-2xl p-2.5">
+                Alina & John family & close friend barn wedding
+              </p>
             </div>
           </div>
 
@@ -97,15 +114,19 @@ const VideoProject = () => {
             <div className="wrapper">
               <ReactPlayer
                 className="player"
-                url={introVideo4}
+                url="https://www.youtube.com/watch?v=6cSO3PpnPlE"
                 width="100%"
                 height="100%"
                 controls
               />
             </div>
             <p className="text-center font-medium text-2xl p-2.5">
-              Ceremony Film
+              Special Music Video Project with Evan Castle. He doesn't know
+              what's real & what isn't
             </p>
+            <div className="flex justify-center">
+              <ContactMeBtn linkTo={"/contact"} btnName="Book a call with me" />
+            </div>
           </div>
         </div>
       </section>

@@ -44,9 +44,22 @@ const About = () => {
             <p className="mb-12 max-w-xl">
               My name is <b>Ethan Thuan Le</b>
               <br />
-              <br />A person whose life is about capturing moments that last
+              <br />
+              I started photography since I was 15 when I was kicked out of the house...
+              <br />
+              <br />
+              Actually that doesn't matter.
+              <br />
+              <br />
+              What mattered is I can bring your vision to life. Whether it's an indie project, wedding or commercial, my team and I will deliver. 
+              <br />
+              <br />
+              My life's been all about capturing beautiful images & memories, and I'm gonna make sure yours are no exception.
+              <br />
+              <br />
+              I am going to create more memories until I'm 80s. So if you're looking to turn your fleeting moments into something tangible and last a lifetime, let me know.
             </p>
-            <Link to={"/portfolio"} className="btn">
+            <Link to={"/contact"} className="btn">
               Let's get your story told!
             </Link>
           </motion.div>

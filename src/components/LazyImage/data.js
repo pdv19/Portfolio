@@ -21,6 +21,7 @@ import Project_2_Shot_4 from "../../img/portfolio/project2/project_2_shot_4.jpg"
 import Project_2_Shot_5 from "../../img/portfolio/project2/project_2_shot_5.jpg";
 import Project_2_Shot_6 from "../../img/portfolio/project2/project_2_shot_6.jpg";
 import Project_2_Shot_7 from "../../img/portfolio/project2/project_2_shot_7.jpg";
+import Project_2_Video_Shot_1 from "../../img/portfolio/project2/video_shot_1.mp4";
 
 import Project_3_Video_Shot_1 from "../../img/portfolio/project3/video_shot_1.mp4";
 import Project_3_Shot_1 from "../../img/portfolio/project3/IncelldermNS-3.jpg";
@@ -32,6 +33,7 @@ import Project_3_Video_Shot_2 from "../../img/portfolio/project3/video_shot_2.mp
 import Portfolio_Shot_1 from "../../img/portfolio/portfolio_shot_1.jpg"
 import Portfolio_Shot_2 from "../../img/portfolio/portfolio_shot_2.jpg"
 import Portfolio_Shot_3 from "../../img/portfolio/portfolio_shot_3.jpg"
+import Portfolio_Shot_4 from "../../img/portfolio/portfolio_shot_4.jpg"
 
 export const data = [
   { src: Tommy },
@@ -88,6 +90,8 @@ export const PortfolioSourceImg = {
   SHOT_2: Portfolio_Shot_2,
 
   SHOT_3: Portfolio_Shot_3,
+  
+  SHOT_4: Portfolio_Shot_4,
 };
 
 export const Project1SourceImg = {
@@ -108,6 +112,7 @@ export const Project1SourceImg = {
   SHOT_8: Project_1_Shot_8,
 
   SHOT_9: Project_1_Shot_9,
+
 };
 
 export const Project2SourceImg = {
@@ -124,6 +129,8 @@ export const Project2SourceImg = {
   SHOT_6: Project_2_Shot_6,
 
   SHOT_7: Project_2_Shot_7,
+
+  SHOT_8: Project_2_Video_Shot_1,
 };
 
 export const Project3SourceImg = {
