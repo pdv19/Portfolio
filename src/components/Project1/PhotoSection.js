@@ -13,7 +13,7 @@ const PhotoSection = ({ photoList }) => {
       {photoList.map((item, index) => (
         <PhotoCard key={index} id={index + 1} itemProps={item} />
       ))}
-      <div className="h-10"></div>
+      {/* <div className="h-10"></div> */}
     </div>
   );
 };
