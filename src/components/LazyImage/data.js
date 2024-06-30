@@ -30,10 +30,10 @@ import Project_3_Shot_3 from "../../img/portfolio/project3/DaiNamMenu-93.jpg";
 import Project_3_Shot_4 from "../../img/portfolio/project3/Boxing-gym.jpg";
 import Project_3_Video_Shot_2 from "../../img/portfolio/project3/video_shot_2.mp4";
 
-import Portfolio_Shot_1 from "../../img/portfolio/portfolio_shot_1.jpg"
-import Portfolio_Shot_2 from "../../img/portfolio/portfolio_shot_2.jpg"
-import Portfolio_Shot_3 from "../../img/portfolio/portfolio_shot_3.jpg"
-import Portfolio_Shot_4 from "../../img/portfolio/portfolio_shot_4.jpg"
+import Portfolio_Shot_1 from "../../img/portfolio/portfolio_shot_1_resized.jpg"
+import Portfolio_Shot_2 from "../../img/portfolio/portfolio_shot_2_resized.jpg"
+import Portfolio_Shot_3 from "../../img/portfolio/portfolio_shot_3_resized.jpg"
+import Portfolio_Shot_4 from "../../img/portfolio/portfolio_shot_4_resized.jpg"
 
 export const data = [
   { src: Tommy },
