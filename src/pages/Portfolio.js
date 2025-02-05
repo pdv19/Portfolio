@@ -24,7 +24,7 @@ const Portfolio = () => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: "100%" }}
         transition={transition1}
-        className="section text-center"
+        className="min-h-screen text-center"
         style={{ backgroundColor: "#F1F2F2" }}
       >
         {/* <div className="container mx-auto h-full relative"> */}
@@ -37,7 +37,7 @@ const Portfolio = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: "-80%" }}
           transition={transition1}
-          className="flex flex-col lg:items-start mx-auto mt-auto"
+          className="flex flex-col"
         >
           <h1 className="h1 mx-auto mt-auto">Portfolio</h1>
           <p className="mb-12 max-w-sm  mx-auto mt-auto">

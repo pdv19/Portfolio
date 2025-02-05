@@ -37,7 +37,7 @@ const Contact = () => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: "100%" }}
       transition={transition1}
-      className="section"
+      className="min-h-screen"
       style={{ backgroundColor: '#F1F2F2' }}
     >
       <div className="container mx-auto h-full">
